@@ -214,7 +214,7 @@ html.lite .arch .scan{display:none}
 
 
 /* ===== PRICING ===== */
-.pr{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.pr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
 .pc{padding:22px 24px;position:relative}
 .pc.hot{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 30px 70px -30px var(--gold)}
 .pc h3{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.2em;color:var(--gold)}
@@ -414,6 +414,7 @@ html.lite .arch .scan{display:none}
   <div class="pr">
     <div class="gl pc hot"><span class="rb" data-i18n="pr1b">НАЙ-ИЗГОДНО</span><h3 data-i18n="pr1h">РАННО ЗАПИСВАНЕ</h3><div class="amt">79 €<small data-i18n="per">/ месец</small></div><p data-i18n="pr1s">до официалния старт на групата</p></div>
     <div class="gl pc"><h3 data-i18n="pr2h">РЕДОВНА ЦЕНА</h3><div class="amt">89 €<small data-i18n="per">/ месец</small></div><p data-i18n="pr2s">след официалния старт</p></div>
+    <div class="gl pc"><h3 data-i18n="pr3h">НАСТОЯЩИ УЧЕНИЦИ</h3><div class="amt">69 €<small data-i18n="per">/ месец</small></div><p data-i18n="pr3s">само за настоящи ученици на Team-Vee</p></div>
   </div>
   <ul class="terms">
     <li data-i18n="tm1">Месечен абонамент, който се подновява автоматично всеки месец.</li>
@@ -421,7 +422,7 @@ html.lite .arch .scan{display:none}
     <li data-i18n="tm3">Ако платиш предварително, платеният ти период започва от официалния старт на групата, а не от датата на плащане.</li>
     <li data-i18n="tm4">След старта всеки нов участник се подновява според собствената си дата на плащане.</li>
   </ul>
-  <p class="stu" data-i18n="stu">ВЕЧЕ СИ УЧЕНИК НА TEAM-VEE? За теб има специална месечна цена. Свържи се с мен, за да получиш личния си линк за записване.</p>
+  <p class="stu" data-i18n="stu">ВЕЧЕ СИ УЧЕНИК НА TEAM-VEE? Твоята цена е 69 € на месец. Свържи се с мен, за да получиш личния си линк за записване.</p>
   <div class="row">
     <a class="btn pri payBtn" href="#"><span data-i18n="bEarly">Запиши се рано – 79 €</span></a>
     <a class="btn" href="https://team-vee.com/live" target="_blank" rel="noopener"><span data-i18n="bInfo">Искам информация за старта</span> →</a>
@@ -490,9 +491,9 @@ const T = {bg:{
  k6:'Влез',h6a:'Бъди сред',h6b:'първите.',st:'ГРУПАТА СТАРТИРА СКОРО',cdD:'ДНИ',cdH:'ЧАСА',cdM:'МИН',cdS:'СЕК',
  p6:'Остави имейла си и ще получиш формата, условията и датата на старта. Това е само запитване за информация — не е покупка и не те задължава.',j1:'Искам информация за старта',j3:'Сподели',
  risk:'Рисково предупреждение: търговията с Forex и CFD носи висок риск от загуба на капитал. Съдържанието е образователно и не представлява финансов съвет. Няма гаранция за печалба.',
- k7:'Цени',h7a:'Влез рано.',h7b:'Запази цената.',pr1b:'НАЙ-ИЗГОДНО',pr1h:'РАННО ЗАПИСВАНЕ',pr1s:'до официалния старт на групата',pr2h:'РЕДОВНА ЦЕНА',pr2s:'след официалния старт',per:'/ месец',
+ k7:'Цени',h7a:'Влез рано.',h7b:'Запази цената.',pr1b:'НАЙ-ИЗГОДНО',pr1h:'РАННО ЗАПИСВАНЕ',pr1s:'до официалния старт на групата',pr2h:'РЕДОВНА ЦЕНА',pr2s:'след официалния старт',pr3h:'НАСТОЯЩИ УЧЕНИЦИ',pr3s:'само за настоящи ученици на Team-Vee',per:'/ месец',
  tm1:'Месечен абонамент, който се подновява автоматично всеки месец.',tm2:'Запазваш цената, на която си се записал, докато абонаментът ти е активен. Ако го прекратиш и по-късно се върнеш, важи актуалната цена.',tm3:'Ако платиш предварително, платеният ти период започва от официалния старт на групата, а не от датата на плащане.',tm4:'След старта всеки нов участник се подновява според собствената си дата на плащане.',
- stu:'ВЕЧЕ СИ УЧЕНИК НА TEAM-VEE? За теб има специална месечна цена. Свържи се с мен, за да получиш личния си линк за записване.',bEarly:'Запиши се рано – 79 €',bInfo:'Искам информация за старта',nopay:'Плащането се активира скоро — остави имейл за информация.',
+ stu:'ВЕЧЕ СИ УЧЕНИК НА TEAM-VEE? Твоята цена е 69 € на месец. Свържи се с мен, за да получиш личния си линк за записване.',bEarly:'Запиши се рано – 79 €',bInfo:'Искам информация за старта',nopay:'Плащането се активира скоро — остави имейл за информация.',
  sh_t:'Сподели',sh_s:'Със снимката на Vee в публикацията',copy:'Копирай линк',more:'Още…',copied:'Линкът е копиран ✓',lite_on:'Лек режим: включен',lite_off:'Пълни ефекти',now:'СЕГА',soon:'СКОРО →',lvl:'ниво'
 },en:{
  brand:'VEE · THE GOLDEN HOUR',a_theme:'Light / dark theme',a_lang:'Change language',a_sound:'Sound',a_fx:'Lite mode (fewer effects)',a_share:'Share',
@@ -511,9 +512,9 @@ const T = {bg:{
  k6:'Join',h6a:'Be among',h6b:'the first.',st:'THE GROUP STARTS SOON',cdD:'DAYS',cdH:'HRS',cdM:'MIN',cdS:'SEC',
  p6:'Leave your email and you will receive the format, terms and start date. This is an information request only — it is not a purchase and does not commit you.',j1:'Leave your email',j3:'Share',
  risk:'Risk warning: trading Forex and CFDs carries a high risk of capital loss. Content is educational and is not financial advice. No profit is guaranteed.',
- k7:'Pricing',h7a:'Join early.',h7b:'Lock your price.',pr1b:'BEST VALUE',pr1h:'EARLY SIGN-UP',pr1s:'until the official start of the group',pr2h:'REGULAR PRICE',pr2s:'after the official start',per:'/ month',
+ k7:'Pricing',h7a:'Join early.',h7b:'Lock your price.',pr1b:'BEST VALUE',pr1h:'EARLY SIGN-UP',pr1s:'until the official start of the group',pr2h:'REGULAR PRICE',pr2s:'after the official start',pr3h:'CURRENT STUDENTS',pr3s:'only for current Team-Vee students',per:'/ month',
  tm1:'A monthly subscription that renews automatically every month.',tm2:'You keep the price you signed up at for as long as your subscription is active. If you cancel and return later, the current price applies.',tm3:'If you pay in advance, your paid period starts from the official start of the group, not from the payment date.',tm4:'After the start, each new member renews on their own payment date.',
- stu:"ALREADY A TEAM-VEE STUDENT? You have a special monthly price. Contact me to receive your personal registration link.",bEarly:'Sign up early – €79',bInfo:'I want info about the start',nopay:'Payment opens soon — leave your email for details.',
+ stu:"ALREADY A TEAM-VEE STUDENT? Your price is €69 per month. Contact me to receive your personal registration link.",bEarly:'Sign up early – €79',bInfo:'I want info about the start',nopay:'Payment opens soon — leave your email for details.',
  sh_t:'Share',sh_s:"With Vee's photo in the post",copy:'Copy link',more:'More…',copied:'Link copied ✓',lite_on:'Lite mode: on',lite_off:'Full effects',now:'NOW',soon:'SOON →',lvl:'level'
 }};
 const NAV=['nv0','nv1','nv2','nv3','nv4','nv5','nv6','nv7'];
