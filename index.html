@@ -96,9 +96,6 @@ html.lite .gl{backdrop-filter:none;-webkit-backdrop-filter:none}
 @keyframes glint{60%,100%{transform:translateX(120%)}}
 .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 
-.launch-date{display:inline-block;margin-top:20px;padding:13px 20px;border:2px solid var(--gold);border-radius:14px;background:var(--glass);color:var(--gold);font-family:var(--sans);font-size:clamp(17px,2.2vw,26px);font-weight:800;line-height:1.35;letter-spacing:.025em;box-shadow:0 0 24px -16px var(--gold)}
-@media(max-width:620px){.launch-date{font-size:19px;padding:12px 14px}}
-
 /* ===== S0 INTRO ===== */
 .s0{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,4vw,70px);align-items:center}
 .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:var(--glass);
@@ -282,6 +279,37 @@ html.lite .arch .scan{display:none}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .title b{transform:none}
 }
+
+/* Compact, responsive launch information */
+.title{font-size:clamp(52px,9vw,132px);overflow-wrap:normal}
+.title span{overflow:visible}
+.launch-date{display:table;max-width:100%;margin-top:18px;padding:10px 16px;border:1px solid var(--gold);border-radius:14px;background:var(--glass);color:var(--gold);font-weight:700;font-size:clamp(12px,1.25vw,17px);line-height:1.45;letter-spacing:.02em;box-shadow:0 0 20px -12px var(--gold)}
+.status{letter-spacing:.06em;line-height:1.5;max-width:100%;text-align:left}
+@media(max-width:860px){.title{font-size:clamp(43px,11vw,78px)}.launch-date{font-size:clamp(12px,3vw,15px)}.status{font-size:11px}}
+@media(max-width:480px){.title{font-size:clamp(40px,10.5vw,58px)}.s0{gap:12px}.arch{width:min(38vw,145px)}.sub{margin-top:12px}.launch-date{margin-top:12px;padding:9px 11px}.row{margin-top:15px}}
+
+/* Final layout correction: keep the opening content within the viewport */
+#s0 .wrap{max-width:1180px}
+#s0 .title{font-size:clamp(48px,7.2vw,104px);line-height:.9}
+#s0 .sub{margin-top:14px;font-size:clamp(14px,1.25vw,17px);line-height:1.45}
+#s0 .launch-date{margin-top:13px;padding:9px 13px;font-size:clamp(12px,1.1vw,15px)}
+#s0 .row{margin-top:14px}
+#s0 .hint{margin-top:14px}
+#s7 .status{font-size:clamp(12px,1.2vw,16px);font-weight:700;letter-spacing:.025em;justify-content:center;text-align:center}
+@media(max-width:860px){#s0 .title{font-size:clamp(43px,9vw,74px)}#s0 .s0{gap:14px}}
+@media(max-width:480px){#s0 .title{font-size:clamp(40px,10.2vw,56px)}#s0 .arch{width:min(34vw,125px)}#s0 .sub{margin-top:10px}#s0 .launch-date{margin-top:10px}#s0 .hint{margin-top:10px}}
+@media(max-height:740px) and (min-width:861px){#s0 .title{font-size:clamp(44px,6.3vw,88px)}#s0 .sub{margin-top:10px}#s0 .hint{margin-top:8px}#s0 .launch-date{margin-top:9px}}
+
+/* Countdown visible on opening screen, without pushing the content off-screen */
+#s0 .cd-intro{justify-content:flex-start;margin:12px 0 4px;gap:8px;flex-wrap:wrap}
+#s0 .cd-intro div{min-width:58px;padding:8px 9px;border-radius:11px;text-align:center}
+#s0 .cd-intro b{font-size:clamp(25px,3vw,34px)}
+#s0 .cd-intro span{font-size:9px;letter-spacing:.08em}
+#s0 .sub{margin-top:14px}
+#s0 .row{margin-top:16px}
+#s0 .hint{margin-top:16px}
+@media(max-width:860px){#s0 .title{font-size:clamp(45px,10vw,86px)}#s0 .arch{width:min(35vw,150px)}#s0 .s0{gap:12px}}
+@media(max-width:520px){#s0 .title{font-size:clamp(42px,11vw,66px)}#s0 .cd-intro div{min-width:54px;padding:6px 7px}#s0 .hint{margin-top:10px}}
 </style>
 </head>
 <body>
@@ -312,10 +340,10 @@ html.lite .arch .scan{display:none}
 <!-- ===== 0 INTRO ===== -->
 <section class="st" id="s0"><div class="wrap s0">
   <div>
-    <div class="pill"><i class="dot"></i><span data-i18n="pill">СКОРО В ЕФИР</span></div>
     <h1 class="title"><span><b class="gold" data-i18n="t1" style="--d:1.5s">Златният</b></span><span><b data-i18n="t2" style="--d:1.75s">час</b></span></h1>
     <p class="sub" data-i18n="sub">Новата група на Vee за трейдинг на живо — Forex и Злато. Пазарът в реално време, анализ пред очите ти и търпение преди действие.</p>
-    <div class="launch-date" data-i18n="launch_date">СТАРТ НА ЖИВИТЕ СЕСИИ: 16 НОЕМВРИ 2026</div>
+    <div class="launch-date" data-i18n="launchDate">СТАРТ НА ЖИВИТЕ СЕСИИ: 16 НОЕМВРИ 2026</div>
+    <div class="cd cd-intro" id="cdIntro"><div><b id="cdIntroD">0</b><span data-i18n="cdD">ДНИ</span></div><div><b id="cdIntroH">0</b><span data-i18n="cdH">ЧАСА</span></div><div><b id="cdIntroM">0</b><span data-i18n="cdM">МИН</span></div><div><b id="cdIntroS">0</b><span data-i18n="cdS">СЕК</span></div></div>
     <div class="row">
       <button class="btn pri" data-go="7"><span data-i18n="cta">Влез в списъка</span> →</button>
       <button class="btn" data-go="1" data-i18n="cta2">Как работи</button>
@@ -436,7 +464,7 @@ html.lite .arch .scan{display:none}
 <section class="st" id="s7"><div class="wrap join">
   <div class="kick" data-i18n="k6">Влез</div>
   <h2><span data-i18n="h6a">Бъди сред</span> <em data-i18n="h6b">първите.</em></h2>
-  <div class="gl status"><i class="dot"></i><span data-i18n="st">ГРУПАТА СТАРТИРА СКОРО</span></div>
+  <div class="gl status"><i class="dot"></i><span data-i18n="st">СТАРТ НА ЖИВИТЕ СЕСИИ: 16 НОЕМВРИ 2026</span></div>
   <div class="cd" id="cd"><div><b id="cdD">0</b><span data-i18n="cdD">ДНИ</span></div><div><b id="cdH">0</b><span data-i18n="cdH">ЧАСА</span></div><div><b id="cdM">0</b><span data-i18n="cdM">МИН</span></div><div><b id="cdS">0</b><span data-i18n="cdS">СЕК</span></div></div>
   <p class="lead" data-i18n="p6">Остави имейла си и ще получиш формата, условията и датата на старта. Това е само запитване за информация — не е покупка и не те задължава.</p>
   <div class="row">
@@ -472,7 +500,7 @@ html.lite .arch .scan{display:none}
    Настройки:
    LAUNCH_ISO — когато Vee обяви точния старт, постави дата, напр. '2026-11-16T19:00:00+02:00'
    ============================================================ */
-const LAUNCH_ISO = '';
+const LAUNCH_ISO = '2026-11-16T09:15:00+02:00';
 /* PAY_URL — линк за директно плащане на абонамента 79 €/мес (напр. Stripe Payment Link). Докато е празен, бутонът показва съобщение. */
 const PAY_URL = 'https://buy.stripe.com/9B6fZha8G9GDcQjfXE8N200';
 const SHARE_TEXT = {bg:'Vee · Златният час — нова група за трейдинг на живо: Forex и Злато', en:"Vee · The Golden Hour — a new live trading group: Forex & Gold"};
@@ -480,8 +508,8 @@ const SHARE_TEXT = {bg:'Vee · Златният час — нова група �
 const T = {bg:{
  brand:'VEE · ЗЛАТНИЯТ ЧАС',a_theme:'Светла / тъмна тема',a_lang:'Смени езика',a_sound:'Звук',a_fx:'Лек режим (по-малко ефекти)',a_share:'Сподели',
  nv0:'Старт',nv1:'Групата',nv2:'Сесията',nv3:'Пазарите',nv4:'Дисциплина',nv5:'Vee',nv6:'Цена',nv7:'Влез',
- pill:'СКОРО В ЕФИР',t1:'Златният',t2:'час',sub:'Новата група на Vee за трейдинг на живо — Forex и Злато. Пазарът в реално време, анализ пред очите ти и търпение преди действие.',
- cta:'Влез в списъка',cta2:'Как работи',hint:'Плъзни времето',launch_date:'СТАРТ НА ЖИВИТЕ СЕСИИ: 16 НОЕМВРИ 2026',
+ pill:'СТАРТ: 16 НОЕМВРИ',launchDate:'СТАРТ НА ЖИВИТЕ СЕСИИ: 16 НОЕМВРИ 2026',t1:'Златният',t2:'час',sub:'Новата група на Vee за трейдинг на живо — Forex и Злато. Пазарът в реално време, анализ пред очите ти и търпение преди действие.',
+ cta:'Влез в списъка',cta2:'Как работи',hint:'Плъзни времето',
  k1:'Групата',h1a:'Пазарът на живо.',h1b:'Без шум.',p1:'Платена група за проследяване на Forex и Злато в реално време. Анализатор от Team-Vee споделя екрана си, обяснява анализа и обсъжда възможни сделки — понякога към сесиите се присъединяват и други Анализатори. Основните сесии са по време на Лондонската сесия. По преценка на Анализатора може да има и бонус сесии на живо по време на Нюйоркската сесия — без допълнително заплащане и без фиксиран график.',
  b1:'Екранът е споделен — виждаш как се мисли, а не само какво се прави.',b2:'Условията са подходящи — обсъждаме вход. Не са — чакаме.',b3:'Не всяка сесия завършва със сделка. Това е част от дисциплината.',cap:'Илюстрация — не са реални котировки.',
  k2:'Сесията',h2a:'Четири стъпки.',h2b:'Един ритъм.',s1t:'Наблюдаваме',s1p:'Следим пазара на живо и ключовите събития.',s2t:'Анализираме',s2p:'Анализаторът споделя екрана и обяснява какво вижда.',s3t:'Изчакваме',s3p:'Когато условията не са подходящи, търпеливо чакаме.',s4t:'Обсъждаме',s4p:'Когато се появи възможност, обсъждаме възможен вход.',n2:'Не всяка сесия завършва със сделка.',
@@ -491,7 +519,7 @@ const T = {bg:{
  i0:'ТРЕНД',i1:'КЛЮЧОВО НИВО',i2:'РИСК / ПЕЧАЛБА',enter:'ВЛЕЗ',sc1:'Дисциплинирани',sc2:'Прибързани',sc3:'Пропуснати',n4:'Игра за илюстрация — не е трейдинг съвет.',
  m_wait:'Чакаме…',m_set:'СЕТЪП! Сега ли?',m_ok:'Дисциплина. Точно навреме ✓',m_early:'Прибързан вход ✗ — изчакай и трите.',m_miss:'Сетъпът отмина. Спокойно — идва следващ.',
  h5a:'Седма година',h5b:'в трейдинга.',q5:'„Емоциите и психологията са ключова част от моето обучение.“',p5:'TEAM-VEE Trading Academy. Индивидуалното обучение е с фокус върху Златото; новата група добавя Forex и живо проследяване на пазара.',c1:'7 г. в трейдинга',c2:'Психология',c3:'Злато · Forex',c4:'Онлайн',
- k6:'Влез',h6a:'Бъди сред',h6b:'първите.',st:'ГРУПАТА СТАРТИРА СКОРО',cdD:'ДНИ',cdH:'ЧАСА',cdM:'МИН',cdS:'СЕК',
+ k6:'Влез',h6a:'Бъди сред',h6b:'първите.',st:'СТАРТ НА ЖИВИТЕ СЕСИИ: 16 НОЕМВРИ 2026',cdD:'ДНИ',cdH:'ЧАСА',cdM:'МИН',cdS:'СЕК',
  p6:'Остави имейла си и ще получиш формата, условията и датата на старта. Това е само запитване за информация — не е покупка и не те задължава.',j1:'Искам информация за старта',j3:'Сподели',
  risk:'Рисково предупреждение: търговията с Forex и CFD носи висок риск от загуба на капитал. Съдържанието е образователно и не представлява финансов съвет. Няма гаранция за печалба.',
  k7:'Цени',h7a:'Влез рано.',h7b:'Запази цената.',pr1b:'НАЙ-ИЗГОДНО',pr1h:'РАННО ЗАПИСВАНЕ',pr1s:'до официалния старт на групата',pr2h:'РЕДОВНА ЦЕНА',pr2s:'след официалния старт',per:'/ месец',
@@ -501,8 +529,8 @@ const T = {bg:{
 },en:{
  brand:'VEE · THE GOLDEN HOUR',a_theme:'Light / dark theme',a_lang:'Change language',a_sound:'Sound',a_fx:'Lite mode (fewer effects)',a_share:'Share',
  nv0:'Start',nv1:'Group',nv2:'Session',nv3:'Markets',nv4:'Discipline',nv5:'Vee',nv6:'Price',nv7:'Join',
- pill:'GOING LIVE SOON',t1:'The Golden',t2:'Hour',sub:"Vee's new live trading group — Forex and Gold. The market in real time, analysis in front of your eyes, and patience before action.",
- cta:'Join the list',cta2:'How it works',hint:'Drag through time',launch_date:'LIVE SESSIONS START: 16 NOVEMBER 2026',
+ pill:'STARTS NOVEMBER 16',launchDate:'LIVE SESSIONS START: 16 NOVEMBER 2026',t1:'The Golden',t2:'Hour',sub:"Vee's new live trading group — Forex and Gold. The market in real time, analysis in front of your eyes, and patience before action.",
+ cta:'Join the list',cta2:'How it works',hint:'Drag through time',
  k1:'The group',h1a:'The market, live.',h1b:'No noise.',p1:'A paid group for following Forex and Gold in real time. A Team-Vee analyst shares their screen, explains the analysis and discusses possible trades — other analysts sometimes join the sessions too. The main live sessions take place during the London session. At the Analyst’s discretion, additional New York live sessions may be offered as a bonus, at no extra charge and without a fixed schedule.',
  b1:'The screen is shared — you see how to think, not just what to do.',b2:'Conditions are right — we discuss an entry. They are not — we wait.',b3:'Not every session ends in a trade. That is part of the discipline.',cap:'Illustration — not real quotes.',
  k2:'The session',h2a:'Four steps.',h2b:'One rhythm.',s1t:'Observe',s1p:'We follow the live market and key events.',s2t:'Analyse',s2p:'The analyst shares the screen and explains what they see.',s3t:'Wait',s3p:'When conditions are not right, we patiently wait.',s4t:'Discuss',s4p:'When an opportunity appears, we discuss a possible entry.',n2:'Not every session ends in a trade.',
@@ -512,7 +540,7 @@ const T = {bg:{
  i0:'TREND',i1:'KEY LEVEL',i2:'RISK / REWARD',enter:'ENTER',sc1:'Disciplined',sc2:'Rushed',sc3:'Missed',n4:'Illustrative game — not trading advice.',
  m_wait:'Waiting…',m_set:'SETUP! Now?',m_ok:'Discipline. Right on time ✓',m_early:'Rushed entry ✗ — wait for all three.',m_miss:'The setup passed. Relax — another one comes.',
  h5a:'Seventh year',h5b:'in trading.',q5:'“Emotions and psychology are a key part of my training.”',p5:"TEAM-VEE Trading Academy. The 1:1 training focuses on Gold; the new group adds Forex and live market tracking.",c1:'7 yrs in trading',c2:'Psychology',c3:'Gold · Forex',c4:'Online',
- k6:'Join',h6a:'Be among',h6b:'the first.',st:'THE GROUP STARTS SOON',cdD:'DAYS',cdH:'HRS',cdM:'MIN',cdS:'SEC',
+ k6:'Join',h6a:'Be among',h6b:'the first.',st:'LIVE SESSIONS START: 16 NOVEMBER 2026',cdD:'DAYS',cdH:'HRS',cdM:'MIN',cdS:'SEC',
  p6:'Leave your email and you will receive the format, terms and start date. This is an information request only — it is not a purchase and does not commit you.',j1:'Leave your email',j3:'Share',
  risk:'Risk warning: trading Forex and CFDs carries a high risk of capital loss. Content is educational and is not financial advice. No profit is guaranteed.',
  k7:'Pricing',h7a:'Join early.',h7b:'Lock your price.',pr1b:'BEST VALUE',pr1h:'EARLY SIGN-UP',pr1s:'until the official start of the group',pr2h:'REGULAR PRICE',pr2s:'after the official start',per:'/ month',
@@ -759,10 +787,15 @@ buildPhase(2);
 /* ============================================================
    ОБРАТНО БРОЕНЕ (ако е зададена дата)
    ============================================================ */
-(function(){const el=$('#cd');const d=Date.parse(LAUNCH_ISO);if(!LAUNCH_ISO||isNaN(d))return;
-  function u(){const s=Math.max(0,Math.floor((d-Date.now())/1000));if(s<=0){el.classList.remove('show');return}el.classList.add('show');
-    $('#cdD').textContent=Math.floor(s/86400);$('#cdH').textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');$('#cdM').textContent=String(Math.floor(s%3600/60)).padStart(2,'0');$('#cdS').textContent=String(s%60).padStart(2,'0')}
-  u();setInterval(u,1000)})();
+(function(){const boxes=[$('#cd'),$('#cdIntro')];const d=Date.parse(LAUNCH_ISO);if(!LAUNCH_ISO||isNaN(d))return;
+ function u(){const sec=Math.max(0,Math.floor((d-Date.now())/1000));
+  boxes.forEach(el=>el.classList.toggle('show',sec>0));
+  if(sec<=0)return;
+  const vals=[Math.floor(sec/86400),String(Math.floor(sec%86400/3600)).padStart(2,'0'),String(Math.floor(sec%3600/60)).padStart(2,'0'),String(sec%60).padStart(2,'0')];
+  ['cdD','cdH','cdM','cdS'].forEach((id,i)=>{$('#'+id).textContent=vals[i];$('#cdIntro'+id.slice(2)).textContent=vals[i]});
+ }
+ u();setInterval(u,1000);
+})()
 
 /* часовник */
 const ck=$('#clock');function clk(){ck.textContent=new Date().toLocaleTimeString([], {hour12:false})}clk();setInterval(clk,1000);
