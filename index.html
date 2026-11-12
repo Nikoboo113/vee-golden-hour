@@ -100,10 +100,6 @@ html.lite .gl{backdrop-filter:none;-webkit-backdrop-filter:none}
 .s0{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,4vw,70px);align-items:center}
 .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:var(--glass);
   font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--gold);margin-bottom:22px}
-/* Prominent launch date on the opening screen */
-#s0 .pill{font-size:clamp(16px,1.55vw,23px);font-weight:700;letter-spacing:.11em;padding:13px 23px;border:2px solid var(--gold);background:rgba(12,13,19,.92);box-shadow:0 0 22px rgba(232,196,106,.18);margin-bottom:24px}
-#s0 .pill .dot{width:11px;height:11px;flex-shrink:0}
-@media(max-width:860px){#s0 .pill{font-size:clamp(14px,3.8vw,18px);padding:11px 17px;letter-spacing:.1em;margin-bottom:18px}}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--dn);box-shadow:0 0 0 0 var(--dn);animation:ping 1.6s infinite}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,90,110,.7)}80%,100%{box-shadow:0 0 0 12px rgba(255,90,110,0)}}
 .title{font-family:var(--serif);font-weight:700;line-height:.82;font-size:clamp(58px,12.2vw,184px);letter-spacing:-.02em}
@@ -218,7 +214,7 @@ html.lite .arch .scan{display:none}
 
 
 /* ===== PRICING ===== */
-.pr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
 .pc{padding:22px 24px;position:relative}
 .pc.hot{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 30px 70px -30px var(--gold)}
 .pc h3{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.2em;color:var(--gold)}
@@ -416,8 +412,8 @@ html.lite .arch .scan{display:none}
   <div class="kick" data-i18n="k7">Цени</div>
   <h2><span data-i18n="h7a">Влез рано.</span> <em data-i18n="h7b">Запази цената.</em></h2>
   <div class="pr">
-    <div class="gl pc hot" id="earlyCard"><span class="rb" data-i18n="pr1b">НАЙ-ИЗГОДНО</span><h3 data-i18n="pr1h">РАННО ЗАПИСВАНЕ</h3><div class="amt">79 €<small data-i18n="per">/ месец</small></div><p data-i18n="pr1s">до 16 ноември включително</p></div>
-    <div class="gl pc" id="regularCard"><h3 data-i18n="pr2h">РЕДОВНА ЦЕНА</h3><div class="amt">89 €<small data-i18n="per">/ месец</small></div><p data-i18n="pr2s">от 17 ноември</p></div>
+    <div class="gl pc hot"><span class="rb" data-i18n="pr1b">НАЙ-ИЗГОДНО</span><h3 data-i18n="pr1h">РАННО ЗАПИСВАНЕ</h3><div class="amt">79 €<small data-i18n="per">/ месец</small></div><p data-i18n="pr1s">до официалния старт на групата</p></div>
+    <div class="gl pc"><h3 data-i18n="pr2h">РЕДОВНА ЦЕНА</h3><div class="amt">89 €<small data-i18n="per">/ месец</small></div><p data-i18n="pr2s">след официалния старт</p></div>
   </div>
   <ul class="terms">
     <li data-i18n="tm1">Месечен абонамент, който се подновява автоматично всеки месец.</li>
@@ -425,7 +421,7 @@ html.lite .arch .scan{display:none}
     <li data-i18n="tm3">Ако платиш предварително, платеният ти период започва от официалния старт на групата, а не от датата на плащане.</li>
     <li data-i18n="tm4">След старта всеки нов участник се подновява според собствената си дата на плащане.</li>
   </ul>
-  <p class="stu" data-i18n="stu">ВЕЧЕ СИ УЧЕНИК НА TEAM-VEE? За теб има специални условия. Свържи се с мен, за да получиш личния си линк за записване.</p>
+  <p class="stu" data-i18n="stu">ВЕЧЕ СИ УЧЕНИК НА TEAM-VEE? За теб има специална месечна цена. Свържи се с мен, за да получиш личния си линк за записване.</p>
   <div class="row">
     <a class="btn pri payBtn" href="#"><span data-i18n="bEarly">Запиши се рано – 79 €</span></a>
     <a class="btn" href="https://team-vee.com/live" target="_blank" rel="noopener"><span data-i18n="bInfo">Искам информация за старта</span> →</a>
@@ -436,7 +432,7 @@ html.lite .arch .scan{display:none}
 <section class="st" id="s7"><div class="wrap join">
   <div class="kick" data-i18n="k6">Влез</div>
   <h2><span data-i18n="h6a">Бъди сред</span> <em data-i18n="h6b">първите.</em></h2>
-  <div class="gl status"><i class="dot"></i><span data-i18n="st">СТАРТ: ПОНЕДЕЛНИК, 16 НОЕМВРИ 2026 Г.</span></div>
+  <div class="gl status"><i class="dot"></i><span data-i18n="st">ГРУПАТА СТАРТИРА СКОРО</span></div>
   <div class="cd" id="cd"><div><b id="cdD">0</b><span data-i18n="cdD">ДНИ</span></div><div><b id="cdH">0</b><span data-i18n="cdH">ЧАСА</span></div><div><b id="cdM">0</b><span data-i18n="cdM">МИН</span></div><div><b id="cdS">0</b><span data-i18n="cdS">СЕК</span></div></div>
   <p class="lead" data-i18n="p6">Остави имейла си и ще получиш формата, условията и датата на старта. Това е само запитване за информация — не е покупка и не те задължава.</p>
   <div class="row">
@@ -472,16 +468,15 @@ html.lite .arch .scan{display:none}
    Настройки:
    LAUNCH_ISO — когато Vee обяви точния старт, постави дата, напр. '2026-11-16T19:00:00+02:00'
    ============================================================ */
-const LAUNCH_ISO = '2026-11-16T09:15:00+02:00';
+const LAUNCH_ISO = '';
 /* PAY_URL — линк за директно плащане на абонамента 79 €/мес (напр. Stripe Payment Link). Докато е празен, бутонът показва съобщение. */
-const PAY_URL = ''; // Stripe 79 € — попълва се след активиране на плащанията
-const REGULAR_PAY_URL = ''; // Stripe 89 € — отделен линк, след 16 ноември
+const PAY_URL = 'https://buy.stripe.com/9B6fZha8G9GDcQjfXE8N200';
 const SHARE_TEXT = {bg:'Vee · Златният час — нова група за трейдинг на живо: Forex и Злато', en:"Vee · The Golden Hour — a new live trading group: Forex & Gold"};
 
 const T = {bg:{
  brand:'VEE · ЗЛАТНИЯТ ЧАС',a_theme:'Светла / тъмна тема',a_lang:'Смени езика',a_sound:'Звук',a_fx:'Лек режим (по-малко ефекти)',a_share:'Сподели',
  nv0:'Старт',nv1:'Групата',nv2:'Сесията',nv3:'Пазарите',nv4:'Дисциплина',nv5:'Vee',nv6:'Цена',nv7:'Влез',
- pill:'СТАРТ · 16 НОЕМВРИ',t1:'Златният',t2:'час',sub:'Новата група на Vee за трейдинг на живо — Forex и Злато. Пазарът в реално време, анализ пред очите ти и търпение преди действие.',
+ pill:'СКОРО В ЕФИР',t1:'Златният',t2:'час',sub:'Новата група на Vee за трейдинг на живо — Forex и Злато. Пазарът в реално време, анализ пред очите ти и търпение преди действие.',
  cta:'Влез в списъка',cta2:'Как работи',hint:'Плъзни времето',
  k1:'Групата',h1a:'Пазарът на живо.',h1b:'Без шум.',p1:'Платена група за проследяване на Forex и Злато в реално време. Анализатор от Team-Vee споделя екрана си, обяснява анализа и обсъжда възможни сделки — понякога към сесиите се присъединяват и други Анализатори. Основните сесии са по време на Лондонската сесия. По преценка на Анализатора може да има и бонус сесии на живо по време на Нюйоркската сесия — без допълнително заплащане и без фиксиран график.',
  b1:'Екранът е споделен — виждаш как се мисли, а не само какво се прави.',b2:'Условията са подходящи — обсъждаме вход. Не са — чакаме.',b3:'Не всяка сесия завършва със сделка. Това е част от дисциплината.',cap:'Илюстрация — не са реални котировки.',
@@ -492,17 +487,17 @@ const T = {bg:{
  i0:'ТРЕНД',i1:'КЛЮЧОВО НИВО',i2:'РИСК / ПЕЧАЛБА',enter:'ВЛЕЗ',sc1:'Дисциплинирани',sc2:'Прибързани',sc3:'Пропуснати',n4:'Игра за илюстрация — не е трейдинг съвет.',
  m_wait:'Чакаме…',m_set:'СЕТЪП! Сега ли?',m_ok:'Дисциплина. Точно навреме ✓',m_early:'Прибързан вход ✗ — изчакай и трите.',m_miss:'Сетъпът отмина. Спокойно — идва следващ.',
  h5a:'Седма година',h5b:'в трейдинга.',q5:'„Емоциите и психологията са ключова част от моето обучение.“',p5:'TEAM-VEE Trading Academy. Индивидуалното обучение е с фокус върху Златото; новата група добавя Forex и живо проследяване на пазара.',c1:'7 г. в трейдинга',c2:'Психология',c3:'Злато · Forex',c4:'Онлайн',
- k6:'Влез',h6a:'Бъди сред',h6b:'първите.',st:'СТАРТ: ПОНЕДЕЛНИК, 16 НОЕМВРИ 2026 Г.',cdD:'ДНИ',cdH:'ЧАСА',cdM:'МИН',cdS:'СЕК',
- p6:'Групата стартира в понеделник, 16 ноември 2026 г. Можеш да поискаш информация за формата и условията. Запитването не е покупка и не те задължава.',j1:'Искам информация за старта',j3:'Сподели',
+ k6:'Влез',h6a:'Бъди сред',h6b:'първите.',st:'ГРУПАТА СТАРТИРА СКОРО',cdD:'ДНИ',cdH:'ЧАСА',cdM:'МИН',cdS:'СЕК',
+ p6:'Остави имейла си и ще получиш формата, условията и датата на старта. Това е само запитване за информация — не е покупка и не те задължава.',j1:'Искам информация за старта',j3:'Сподели',
  risk:'Рисково предупреждение: търговията с Forex и CFD носи висок риск от загуба на капитал. Съдържанието е образователно и не представлява финансов съвет. Няма гаранция за печалба.',
- k7:'Цени',h7a:'Влез рано.',h7b:'Запази цената.',pr1b:'НАЙ-ИЗГОДНО',pr1h:'РАННО ЗАПИСВАНЕ',pr1s:'до 16 ноември включително',pr2h:'РЕДОВНА ЦЕНА',pr2s:'от 17 ноември',pr3h:'НАСТОЯЩИ УЧЕНИЦИ',pr3s:'само за настоящи ученици на Team-Vee',per:'/ месец',
+ k7:'Цени',h7a:'Влез рано.',h7b:'Запази цената.',pr1b:'НАЙ-ИЗГОДНО',pr1h:'РАННО ЗАПИСВАНЕ',pr1s:'до официалния старт на групата',pr2h:'РЕДОВНА ЦЕНА',pr2s:'след официалния старт',per:'/ месец',
  tm1:'Месечен абонамент, който се подновява автоматично всеки месец.',tm2:'Запазваш цената, на която си се записал, докато абонаментът ти е активен. Ако го прекратиш и по-късно се върнеш, важи актуалната цена.',tm3:'Ако платиш предварително, платеният ти период започва от официалния старт на групата, а не от датата на плащане.',tm4:'След старта всеки нов участник се подновява според собствената си дата на плащане.',
- stu:'ВЕЧЕ СИ УЧЕНИК НА TEAM-VEE? За теб има специални условия. Свържи се с мен, за да получиш личния си линк за записване.',bEarly:'Запиши се рано – 79 €',bInfo:'Искам информация за старта',nopay:'Плащането се активира скоро — остави имейл за информация.',
+ stu:'ВЕЧЕ СИ УЧЕНИК НА TEAM-VEE? За теб има специална месечна цена. Свържи се с мен, за да получиш личния си линк за записване.',bEarly:'Запиши се рано – 79 €',bInfo:'Искам информация за старта',nopay:'Плащането се активира скоро — остави имейл за информация.',
  sh_t:'Сподели',sh_s:'Със снимката на Vee в публикацията',copy:'Копирай линк',more:'Още…',copied:'Линкът е копиран ✓',lite_on:'Лек режим: включен',lite_off:'Пълни ефекти',now:'СЕГА',soon:'СКОРО →',lvl:'ниво'
 },en:{
  brand:'VEE · THE GOLDEN HOUR',a_theme:'Light / dark theme',a_lang:'Change language',a_sound:'Sound',a_fx:'Lite mode (fewer effects)',a_share:'Share',
  nv0:'Start',nv1:'Group',nv2:'Session',nv3:'Markets',nv4:'Discipline',nv5:'Vee',nv6:'Price',nv7:'Join',
- pill:'START · 16 NOVEMBER',t1:'The Golden',t2:'Hour',sub:"Vee's new live trading group — Forex and Gold. The market in real time, analysis in front of your eyes, and patience before action.",
+ pill:'GOING LIVE SOON',t1:'The Golden',t2:'Hour',sub:"Vee's new live trading group — Forex and Gold. The market in real time, analysis in front of your eyes, and patience before action.",
  cta:'Join the list',cta2:'How it works',hint:'Drag through time',
  k1:'The group',h1a:'The market, live.',h1b:'No noise.',p1:'A paid group for following Forex and Gold in real time. A Team-Vee analyst shares their screen, explains the analysis and discusses possible trades — other analysts sometimes join the sessions too. The main live sessions take place during the London session. At the Analyst’s discretion, additional New York live sessions may be offered as a bonus, at no extra charge and without a fixed schedule.',
  b1:'The screen is shared — you see how to think, not just what to do.',b2:'Conditions are right — we discuss an entry. They are not — we wait.',b3:'Not every session ends in a trade. That is part of the discipline.',cap:'Illustration — not real quotes.',
@@ -513,12 +508,12 @@ const T = {bg:{
  i0:'TREND',i1:'KEY LEVEL',i2:'RISK / REWARD',enter:'ENTER',sc1:'Disciplined',sc2:'Rushed',sc3:'Missed',n4:'Illustrative game — not trading advice.',
  m_wait:'Waiting…',m_set:'SETUP! Now?',m_ok:'Discipline. Right on time ✓',m_early:'Rushed entry ✗ — wait for all three.',m_miss:'The setup passed. Relax — another one comes.',
  h5a:'Seventh year',h5b:'in trading.',q5:'“Emotions and psychology are a key part of my training.”',p5:"TEAM-VEE Trading Academy. The 1:1 training focuses on Gold; the new group adds Forex and live market tracking.",c1:'7 yrs in trading',c2:'Psychology',c3:'Gold · Forex',c4:'Online',
- k6:'Join',h6a:'Be among',h6b:'the first.',st:'START: MONDAY, 16 NOVEMBER 2026',cdD:'DAYS',cdH:'HRS',cdM:'MIN',cdS:'SEC',
- p6:'The group starts on Monday, 16 November 2026. You can request information about the format and terms. An enquiry is not a purchase and does not commit you.',j1:'Leave your email',j3:'Share',
+ k6:'Join',h6a:'Be among',h6b:'the first.',st:'THE GROUP STARTS SOON',cdD:'DAYS',cdH:'HRS',cdM:'MIN',cdS:'SEC',
+ p6:'Leave your email and you will receive the format, terms and start date. This is an information request only — it is not a purchase and does not commit you.',j1:'Leave your email',j3:'Share',
  risk:'Risk warning: trading Forex and CFDs carries a high risk of capital loss. Content is educational and is not financial advice. No profit is guaranteed.',
- k7:'Pricing',h7a:'Join early.',h7b:'Lock your price.',pr1b:'BEST VALUE',pr1h:'EARLY SIGN-UP',pr1s:'through 16 November inclusive',pr2h:'REGULAR PRICE',pr2s:'from 17 November',pr3h:'CURRENT STUDENTS',pr3s:'only for current Team-Vee students',per:'/ month',
+ k7:'Pricing',h7a:'Join early.',h7b:'Lock your price.',pr1b:'BEST VALUE',pr1h:'EARLY SIGN-UP',pr1s:'until the official start of the group',pr2h:'REGULAR PRICE',pr2s:'after the official start',per:'/ month',
  tm1:'A monthly subscription that renews automatically every month.',tm2:'You keep the price you signed up at for as long as your subscription is active. If you cancel and return later, the current price applies.',tm3:'If you pay in advance, your paid period starts from the official start of the group, not from the payment date.',tm4:'After the start, each new member renews on their own payment date.',
- stu:"ALREADY A TEAM-VEE STUDENT? Special terms are available to you. Contact me to receive your personal registration link.",bEarly:'Sign up early – €79',bInfo:'I want info about the start',nopay:'Payment opens soon — leave your email for details.',
+ stu:"ALREADY A TEAM-VEE STUDENT? You have a special monthly price. Contact me to receive your personal registration link.",bEarly:'Sign up early – €79',bInfo:'I want info about the start',nopay:'Payment opens soon — leave your email for details.',
  sh_t:'Share',sh_s:"With Vee's photo in the post",copy:'Copy link',more:'More…',copied:'Link copied ✓',lite_on:'Lite mode: on',lite_off:'Full effects',now:'NOW',soon:'SOON →',lvl:'level'
 }};
 const NAV=['nv0','nv1','nv2','nv3','nv4','nv5','nv6','nv7'];
@@ -796,25 +791,7 @@ function copyLink(){const u=pageURL();const done=()=>toast(t('copied'));
 function openSheet(){$('#sheet').classList.add('open')}function closeSheet(){$('#sheet').classList.remove('open')}
 $('#bShare').onclick=openSheet;$('#bShare2').onclick=openSheet;$('#shClose').onclick=closeSheet;$('#sheet').addEventListener('click',e=>{if(e.target.id==='sheet')closeSheet()});
 
-/* 79 € до 16.11.2026, 23:59:59 ч. София; 89 € от 17.11.2026. */
-function afterEarlyDeadline(){return Date.now() >= Date.parse('2026-11-17T00:00:00+02:00')}
-function refreshOffer(){
-  const expired=afterEarlyDeadline();
-  $('#earlyCard').style.display=expired?'none':'';
-  $('#regularCard').classList.toggle('hot',expired);
-  $$('.payBtn').forEach(a=>{
-    const span=a.querySelector('span');
-    if(span)span.textContent=expired?(lang==='bg'?'Запиши се – 89 €':'Join – €89'):(lang==='bg'?'Запиши се рано – 79 €':'Sign up early – €79');
-    const url=expired?REGULAR_PAY_URL:PAY_URL;
-    if(url){a.href=url;a.target='_blank';a.rel='noopener'}
-    else{a.removeAttribute('href');a.removeAttribute('target');a.style.cursor='pointer'}
-  });
-}
-$$('.payBtn').forEach(a=>a.addEventListener('click',e=>{
-  const url=afterEarlyDeadline()?REGULAR_PAY_URL:PAY_URL;
-  if(!url){e.preventDefault();toast(t('nopay'))}
-}));
-refreshOffer();setInterval(refreshOffer,30000);
+$$('.payBtn').forEach(a=>{if(PAY_URL){a.href=PAY_URL;a.target='_blank';a.rel='noopener'}else a.addEventListener('click',e=>{e.preventDefault();toast(t('nopay'))})});
 /* ---------- бутони ---------- */
 $('#bTheme').onclick=()=>{theme=theme==='dark'?'light':'dark';store.set('vee_theme',theme);applyTheme();beep(440,.06)};
 $('#bLang').onclick=()=>{lang=lang==='bg'?'en':'bg';store.set('vee_lang',lang);applyLang()};
@@ -822,7 +799,7 @@ $('#bSnd').onclick=e=>{snd=!snd;e.currentTarget.setAttribute('aria-pressed',snd)
 $('#bFx').onclick=()=>{lite=!lite;store.set('vee_lite',lite?'1':'0');applyLite();toast(t(lite?'lite_on':'lite_off'))};
 
 /* ---------- старт ---------- */
-applyTheme();resize();applyLite();applyLang();refreshOffer();
+applyTheme();resize();applyLite();applyLang();
 addEventListener('resize',()=>{resize();rail.scrollLeft=cur*W();applyLite()});
 const h=parseInt((location.hash||'').replace('#s',''),10);
 if(!isNaN(h)&&h>0&&h<N_ST){rail.classList.add('free');rail.scrollLeft=h*W();vis=rail.scrollLeft;setTimeout(()=>rail.classList.remove('free'),80)}
