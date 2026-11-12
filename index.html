@@ -96,6 +96,9 @@ html.lite .gl{backdrop-filter:none;-webkit-backdrop-filter:none}
 @keyframes glint{60%,100%{transform:translateX(120%)}}
 .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 
+.launch-date{display:inline-block;margin-top:20px;padding:13px 20px;border:2px solid var(--gold);border-radius:14px;background:var(--glass);color:var(--gold);font-family:var(--sans);font-size:clamp(17px,2.2vw,26px);font-weight:800;line-height:1.35;letter-spacing:.025em;box-shadow:0 0 24px -16px var(--gold)}
+@media(max-width:620px){.launch-date{font-size:19px;padding:12px 14px}}
+
 /* ===== S0 INTRO ===== */
 .s0{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(20px,4vw,70px);align-items:center}
 .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:var(--glass);
@@ -312,6 +315,7 @@ html.lite .arch .scan{display:none}
     <div class="pill"><i class="dot"></i><span data-i18n="pill">СКОРО В ЕФИР</span></div>
     <h1 class="title"><span><b class="gold" data-i18n="t1" style="--d:1.5s">Златният</b></span><span><b data-i18n="t2" style="--d:1.75s">час</b></span></h1>
     <p class="sub" data-i18n="sub">Новата група на Vee за трейдинг на живо — Forex и Злато. Пазарът в реално време, анализ пред очите ти и търпение преди действие.</p>
+    <div class="launch-date" data-i18n="launch_date">СТАРТ НА ЖИВИТЕ СЕСИИ: 16 НОЕМВРИ 2026</div>
     <div class="row">
       <button class="btn pri" data-go="7"><span data-i18n="cta">Влез в списъка</span> →</button>
       <button class="btn" data-go="1" data-i18n="cta2">Как работи</button>
@@ -477,7 +481,7 @@ const T = {bg:{
  brand:'VEE · ЗЛАТНИЯТ ЧАС',a_theme:'Светла / тъмна тема',a_lang:'Смени езика',a_sound:'Звук',a_fx:'Лек режим (по-малко ефекти)',a_share:'Сподели',
  nv0:'Старт',nv1:'Групата',nv2:'Сесията',nv3:'Пазарите',nv4:'Дисциплина',nv5:'Vee',nv6:'Цена',nv7:'Влез',
  pill:'СКОРО В ЕФИР',t1:'Златният',t2:'час',sub:'Новата група на Vee за трейдинг на живо — Forex и Злато. Пазарът в реално време, анализ пред очите ти и търпение преди действие.',
- cta:'Влез в списъка',cta2:'Как работи',hint:'Плъзни времето',
+ cta:'Влез в списъка',cta2:'Как работи',hint:'Плъзни времето',launch_date:'СТАРТ НА ЖИВИТЕ СЕСИИ: 16 НОЕМВРИ 2026',
  k1:'Групата',h1a:'Пазарът на живо.',h1b:'Без шум.',p1:'Платена група за проследяване на Forex и Злато в реално време. Анализатор от Team-Vee споделя екрана си, обяснява анализа и обсъжда възможни сделки — понякога към сесиите се присъединяват и други Анализатори. Основните сесии са по време на Лондонската сесия. По преценка на Анализатора може да има и бонус сесии на живо по време на Нюйоркската сесия — без допълнително заплащане и без фиксиран график.',
  b1:'Екранът е споделен — виждаш как се мисли, а не само какво се прави.',b2:'Условията са подходящи — обсъждаме вход. Не са — чакаме.',b3:'Не всяка сесия завършва със сделка. Това е част от дисциплината.',cap:'Илюстрация — не са реални котировки.',
  k2:'Сесията',h2a:'Четири стъпки.',h2b:'Един ритъм.',s1t:'Наблюдаваме',s1p:'Следим пазара на живо и ключовите събития.',s2t:'Анализираме',s2p:'Анализаторът споделя екрана и обяснява какво вижда.',s3t:'Изчакваме',s3p:'Когато условията не са подходящи, търпеливо чакаме.',s4t:'Обсъждаме',s4p:'Когато се появи възможност, обсъждаме възможен вход.',n2:'Не всяка сесия завършва със сделка.',
@@ -498,7 +502,7 @@ const T = {bg:{
  brand:'VEE · THE GOLDEN HOUR',a_theme:'Light / dark theme',a_lang:'Change language',a_sound:'Sound',a_fx:'Lite mode (fewer effects)',a_share:'Share',
  nv0:'Start',nv1:'Group',nv2:'Session',nv3:'Markets',nv4:'Discipline',nv5:'Vee',nv6:'Price',nv7:'Join',
  pill:'GOING LIVE SOON',t1:'The Golden',t2:'Hour',sub:"Vee's new live trading group — Forex and Gold. The market in real time, analysis in front of your eyes, and patience before action.",
- cta:'Join the list',cta2:'How it works',hint:'Drag through time',
+ cta:'Join the list',cta2:'How it works',hint:'Drag through time',launch_date:'LIVE SESSIONS START: 16 NOVEMBER 2026',
  k1:'The group',h1a:'The market, live.',h1b:'No noise.',p1:'A paid group for following Forex and Gold in real time. A Team-Vee analyst shares their screen, explains the analysis and discusses possible trades — other analysts sometimes join the sessions too. The main live sessions take place during the London session. At the Analyst’s discretion, additional New York live sessions may be offered as a bonus, at no extra charge and without a fixed schedule.',
  b1:'The screen is shared — you see how to think, not just what to do.',b2:'Conditions are right — we discuss an entry. They are not — we wait.',b3:'Not every session ends in a trade. That is part of the discipline.',cap:'Illustration — not real quotes.',
  k2:'The session',h2a:'Four steps.',h2b:'One rhythm.',s1t:'Observe',s1p:'We follow the live market and key events.',s2t:'Analyse',s2p:'The analyst shares the screen and explains what they see.',s3t:'Wait',s3p:'When conditions are not right, we patiently wait.',s4t:'Discuss',s4p:'When an opportunity appears, we discuss a possible entry.',n2:'Not every session ends in a trade.',
